@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE = edge">
+        <meta name="refresh" content="600">
+        <meta content="keyword" content="table, tag, element, reference">
+        <meta content="description" content="It is an html5 table element reference page">
+        <meta content="author" content="arunpandian">
+        <title>Table Element Reference</title>
+    </head>
+
+    <body>
+        <header>
+            <hgroup>
+                <h1>Table Element</h1>
+                <h2>All possible table elements are used...</h2>
+            </hgroup>
+        </header>
+
+        <table>
+
+            <!--colgroup, it is used for styling purpose
+		**** MUST BE USED INSIDE TABLE TAG **** -->
+            <colgroup>
+
+                <!--**** IT IS USED TO GROUP COLUMN *****
+			SPAN used to exdend the number of column 
+			(i.e first two column in our case)-->
+                <col span="2" style="background-color:red">
+
+                <!--This style yello color is applied for next column 
+			(i.e third column)-->
+                <col style="background-color:yellow">
+
+            </colgroup>
+
+            <!--First part of table element
+		****IT SHOULD NOT CONTAIN DATA ONLY HEADING ******
+		****AND NUMBER OF COLUMN ARE CREATED AT THIS STAGE *****-->
+            <thead>
+                <th>Subject</th>
+                <th>Internal 1</th>
+                <th>Internal 2</th>
+            </thead>
+
+            <!--Second part of table element-->
+            <tbody>
+                <!--TR(table row) create a single row-->
+                <tr>
+                    <th>Computer</th>
+                    <!--TD(table data) enter the data -->
+                    <td>90</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <th>Maths</th>
+                    <td>50</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <!-- colspan is used to expand the cell size 
+			(i.e) colspan="3" means a single cell will be expanded to 3 column-->
+                    <th colspan="3">!!! I am weak at maths</th>
+                </tr>
+            </tbody>
+
+            <!--Third or final part of table element-->
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <td>140</td>
+                    <td>135</td>
+                </tr>
+            </tfoot>
+        </table>
+        <footer>
+            <small>Copyright © 2016 Arun Pandian</small>
+        </footer>
+    </body>
+</html>
+
