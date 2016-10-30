@@ -15,8 +15,103 @@
             <h1>HTML5 FORM tag reference</h1>
         </hgroup>
     </header>
+
+
+    <form method="POST" action="received_form_data.php">
+        <!--FIELDSET is used to create a box around the other tag and also group them-->
+        <fieldset>
+            <legend>Name</legend>
+            <!--LABEL is used for mouse user's once you click on label text in browser 
+		its respective textbox will be highlighted
+		it communicate through ID-->
+            <p>
+                <label for="id_name">Name: </label>
+                <input type="text" id="id_name" name="name" maxlength="30" autocomplete="on" 
+		required="required" autofocus="autofocus" placeholder="Enter the name">
+            </p>
+
+            <!--
+		ID is used for client side scripting (i.e) javascript for validation
+		NAME is used for server side because form data will be wrapped and sent through http post 
+		AUTOCOMPLETE attribute is used to auto fill the form field with previous entered data
+		REQUIRED attribute is used , that field coukd not be left empty before submit
+		AUTOFOCUS attribute is used , the cursor will point to it default
+		PLACEHOLDER attribute is used to show dummy message about tha field-->
+
+            <p>
+                <label for="id_password">Password: </label>
+                <input type="password" id="id_password" name="password" maxlength="30" 
+		required="required" placeholder="Enter the password">
+            </p>
+        </fieldset>
+
+
+        <fieldset>
+            <!--LEGEND is used to define caption for fieldset-->
+            <legend>Radio Button</legend>
+            <p>
+                <label for="id_radio_small">Small</label>
+                <!--NOTE: NAME of all radio button must be same-->
+                <!--VALUE is the attribute that returns the user selected value to server-->
+                <input type="radio" id="id_radio_small" name="radio_sample" value="small">
+            </p>
+            <p>
+                <label for="id_radio_big">Big</label>
+                <!--CHECKED is used to default select option-->
+                <input type="radio" id="id_radio_big" name="radio_sample" value="big" checked>
+            </p>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>check Box</legend>
+            <p>
+                <label for="id_checkbox_alpha">Alphabet</label>
+                        <!--NOTE: Name of all checkbox must be different-->
+                        <input type="checkbox" id="id_checkbox_alpha" name="checkbox_alpha" value="alpha">
+            </p>
+            <p>
+                <label for="id_checkbox_num">Numeric</label>
+                <input type="checkbox" id="id_checkbox_num" name="checkbox_num" value="alpha">
+            </p>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Drop down selection list</legend>
+            <p>
+                <label for="id_list">Encryption Method</label>
+                <select id="id_list" name="list_name">
+                    <option value="weak">Weak</option>
+                    <option value="medium">Medium</option>
+                    <!-- SELECTED is used for default select-->
+                    <option value="secure" selected>Secure</option>
+                </select>
+            </p>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Text Area</legend>
+            <p>
+                <label for="id_textarea">Comment</label>
+                <textarea id="id_textarea" name="comment" cols="50" rows="10" maxlength="1000"></textarea>
+            </p>
+        </fieldset>
+
+
+	<fieldset>
+	    <legend>Button</legend>
+	    <p>
+          	<input type="submit" value="Submit it">
+    		<input type="reset" value="Reset it">
+    		<button type="reset">Reset Button</button>
+    		<input type="button" value="Refresh the Site" onClick="window.location.href=window.location.href">
+	   </p>
+	</fieldset>
+    </form>
     <footer>
-        <small>Copyright © 2016 Arun Pandian</small>
+    	<small>Copyright © 2016 Arun Pandian</small>
     </footer>
 </html>
 
